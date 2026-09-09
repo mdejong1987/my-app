@@ -25,6 +25,10 @@ function Cta() {
   return <div className="header-cta">Bel Ons: +6 452536985</div>;
 }
 
+export const metadata = {
+  title: "Dit is een titel",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="nl">
