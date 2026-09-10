@@ -1,4 +1,5 @@
 import "./globals.css";
+import Image from "next/image";
 
 function Navigation() {
   return (
@@ -42,7 +43,14 @@ export default function RootLayout({ children }) {
         <header>
           <div className="header-container">
             <div className="header-logo">
-              <a href="/">Logo</a>
+              <a href="/">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="Logo"
+                  width="250"
+                  height="150"
+                ></Image>
+              </a>
             </div>
             <nav>
               <Navigation />

@@ -1,29 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body,
-html {
-  font-family:
-    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap");
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 960px;
+  width: 1200px;
   margin: 0 auto;
+}
+
+.header-hero {
+  background: url("/public/images/banner.jpg");
+  min-height: 150px;
 }
 
 .header-cta {
   background-color: #fdcb6e;
-  padding: 10px;
   border-radius: 10px;
+  padding: 10px 30px;
   text-align: center;
-
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
   span {
     font-weight: bold;
     display: block;
@@ -33,10 +30,15 @@ html {
 nav {
   ul {
     display: flex;
-
     li {
-      padding: 5px;
       list-style: none;
+      padding: 0 25px;
+
+      a {
+        font-family: "Slabo 13px", serif;
+        font-size: 18px;
+        text-decoration: none;
+      }
     }
   }
 }
