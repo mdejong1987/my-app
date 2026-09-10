@@ -1,3 +1,5 @@
+import "./globals.css";
+
 function Navigation() {
   return (
     <ul>
@@ -22,7 +24,11 @@ function Hero() {
 }
 
 function Cta() {
-  return <div className="header-cta">Bel Ons: +6 452536985</div>;
+  return (
+    <a className="header-cta" href="tel:0768945325">
+      <span>BEL ONS:</span> 0768945325
+    </a>
+  );
 }
 
 export const metadata = {
@@ -34,13 +40,15 @@ export default function RootLayout({ children }) {
     <html lang="nl">
       <body>
         <header>
-          <div className="header-logo">
-            <a href="#">Logo</a>
+          <div className="header-container">
+            <div className="header-logo">
+              <a href="/">Logo</a>
+            </div>
+            <nav>
+              <Navigation />
+            </nav>
+            <Cta />
           </div>
-          <nav>
-            <Navigation />
-          </nav>
-          <Cta />
           <Hero />
         </header>
         {children}
