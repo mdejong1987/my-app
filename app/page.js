@@ -1,16 +1,22 @@
 export default function Home() {
   return (
     <main>
-      <div id="about">
-        <h2>About</h2>
+      <div id="about" className="content-main content-main--about">
+        <div className="content">
+          <h2>About</h2>
+        </div>
       </div>
 
-      <div id="services">
-        <h2>Services</h2>
+      <div id="services" className="content-main content-main--services">
+        <div className="content">
+          <h2>Services</h2>
+        </div>
       </div>
 
-      <div id="contact">
-        <h2>Contact</h2>
+      <div id="contact" className="content-main content-main--contact">
+        <div className="content">
+          <h2>Contact</h2>
+        </div>
       </div>
     </main>
   );

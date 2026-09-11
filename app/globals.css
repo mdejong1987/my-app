@@ -1,16 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 1200px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 968px;
   margin: 0 auto;
 }
 
 .header-hero {
-  background: url("/public/images/banner.jpg");
-  min-height: 150px;
+  background: url("../public/images/banner.jpg") no-repeat center center;
+  min-height: 800px;
 }
 
 .header-cta {
@@ -40,5 +44,20 @@ nav {
         text-decoration: none;
       }
     }
+  }
+}
+
+main {
+  .content-main {
+    padding: 60px 0;
+
+    .content {
+      width: 968px;
+      margin: 0 auto;
+    }
+  }
+
+  .content-main--services {
+    background-color: rgb(243, 243, 243);
   }
 }
