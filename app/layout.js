@@ -3,39 +3,42 @@ import Image from "next/image";
 
 function Navigation() {
   return (
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#services">Services</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
+    <div className="navbar-menu">
+      <div className="navbar-start">
+        <a className="navbar-item" href="/">
+          Home
+        </a>
+        <a className="navbar-item" href="#about">
+          About
+        </a>
+        <a className="navbar-item" href="#services">
+          Services
+        </a>
+        <a className="navbar-item" href="#contact">
+          Contact
+        </a>
+      </div>
+      <div className="navbar-end">
+        <div className="navbar-item">
+          <div className="buttons">
+            <a className="button is-warning" href="tel:0768945325">
+              <strong>BEL ONS:</strong> 0768945325
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
 function Hero() {
   return (
     <div className="hero is-primary is-halfheight">
-      <div class="hero-body">
+      <div className="hero-body">
         <div className="title">Hero Title</div>
         <div className="subtitle">Hero Title</div>
       </div>
     </div>
-  );
-}
-
-function Cta() {
-  return (
-    <a className="header-cta" href="tel:0768945325">
-      <span>BEL ONS:</span> 0768945325
-    </a>
   );
 }
 
@@ -48,25 +51,24 @@ export default function RootLayout({ children }) {
     <html lang="nl">
       <body>
         <header>
-          <div className="header-container">
-            <div className="header-logo">
-              <a href="/">
-                <Image
-                  src="/images/logo.jpg"
-                  alt="Logo"
-                  width="250"
-                  height="150"
-                ></Image>
-              </a>
-            </div>
-            <nav>
+          <div className="container">
+            <nav className="navbar">
+              <div className="navbar-brand">
+                <a href="/">
+                  <Image
+                    src="/images/logo.jpg"
+                    alt="Logo"
+                    width="250"
+                    height="150"
+                  ></Image>
+                </a>
+              </div>
               <Navigation />
             </nav>
-            <Cta />
           </div>
           <Hero />
         </header>
-        <div class="container">{children}</div>
+        <div className="container">{children}</div>
 
         <footer class="footer">
           <div class="content has-text-centered">
