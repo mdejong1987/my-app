@@ -21,7 +21,14 @@ function Navigation() {
 }
 
 function Hero() {
-  return <div className="header-hero">[HERO IMAGE HERE]</div>;
+  return (
+    <div className="hero is-primary is-halfheight">
+      <div class="hero-body">
+        <div className="title">Hero Title</div>
+        <div className="subtitle">Hero Title</div>
+      </div>
+    </div>
+  );
 }
 
 function Cta() {
@@ -59,8 +66,13 @@ export default function RootLayout({ children }) {
           </div>
           <Hero />
         </header>
-        {children}
-        <footer>Hier komt de footer</footer>
+        <div class="container">{children}</div>
+
+        <footer class="footer">
+          <div class="content has-text-centered">
+            &copy; [ Bedrijfsnaam ] 2026
+          </div>
+        </footer>
       </body>
     </html>
   );
