@@ -38,6 +38,7 @@ function Hero() {
         <div className="title">Hero Title</div>
         <div className="subtitle">Hero Title</div>
       </div>
+      <div className="is-overlay"></div>
     </div>
   );
 }

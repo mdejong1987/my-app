@@ -1,10 +1,10 @@
 export default function Home() {
   return (
     <main>
-      <div id="about" className="content-main content-main--about">
+      <section id="about" className="section content-main content-main--about">
         <div className="content container">
-          <h2 className="is-size-1">About</h2>
-          <p className="is-size-4">
+          <h2 className="is-size-2 title">About</h2>
+          <p className="is-size-4 subtitle">
             Sed in feugiat augue. Morbi pretium purus mi, ac vestibulum sapien
             sodales sed. Maecenas ac efficitur odio. Quisque posuere nisi
             volutpat massa ultricies, vel finibus sem congue. Aliquam vel ligula
@@ -15,17 +15,32 @@ export default function Home() {
             ipsum. Praesent est neque, mattis ac lorem quis, semper pharetra ex.
           </p>
         </div>
-      </div>
+      </section>
 
-      <div id="services" className="content-main content-main--services">
+      <section
+        id="services"
+        className="section content-main content-main--services"
+      >
         <div className="content container">
-          <h2>Services</h2>
+          <h2 className="is-size-2 title">Services</h2>
+          <div className="columns is-3 is-mobile">
+            <div className="column">
+              <div className="card">
+                <div className="card-content">sdf</div>
+              </div>
+            </div>
+            <div className="column">
+              <div className="card">
+                <div className="card-content">sdf</div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       <div id="contact" className="content-main content-main--contact">
         <div className="content container">
-          <h2>Contact</h2>
+          <h2 className="is-size-2">Contact</h2>
         </div>
       </div>
     </main>
