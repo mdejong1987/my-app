@@ -1,1 +1,9 @@
 @import "../node_modules/bulma/css/bulma.min.css";
+
+.content {
+  padding: 60px 0;
+}
+
+.content-main--services {
+  background-color: red;
+}

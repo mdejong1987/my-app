@@ -68,10 +68,11 @@ export default function RootLayout({ children }) {
           </div>
           <Hero />
         </header>
-        <div className="container">{children}</div>
 
-        <footer class="footer">
-          <div class="content has-text-centered">
+        {children}
+
+        <footer className="footer">
+          <div className="content has-text-centered">
             &copy; [ Bedrijfsnaam ] 2026
           </div>
         </footer>
