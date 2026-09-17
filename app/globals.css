@@ -1,5 +1,10 @@
 @import "../node_modules/bulma/css/bulma.min.css";
 
+.hero {
+  background: url("../public/images/banner-02.jpg") center center no-repeat;
+  background-size: cover;
+}
+
 .content {
   padding: 60px 0;
 }

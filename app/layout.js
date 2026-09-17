@@ -22,7 +22,8 @@ function Navigation() {
         <div className="navbar-item">
           <div className="buttons">
             <a className="button is-warning" href="tel:0768945325">
-              <strong>BEL ONS:</strong> 0768945325
+              <strong>BEL ONS:</strong>
+              0768945325
             </a>
           </div>
         </div>
@@ -33,12 +34,25 @@ function Navigation() {
 
 function Hero() {
   return (
-    <div className="hero is-primary is-halfheight">
+    <div className="hero is-large">
       <div className="hero-body">
-        <div className="title">Hero Title</div>
-        <div className="subtitle">Hero Title</div>
+        <div className="container">
+          <cdiv className="columns">
+            <div className="column"></div>
+            <div className="column is-three-fifths">
+              <div className="title is-size-1 is-uppercase has-text-white">
+                Hero Title
+              </div>
+              <div className="subtitle is-size-2 has-text-white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </div>
+              <div className="button is-large is-primary has-text-white">
+                Maak een afspraak
+              </div>
+            </div>
+          </cdiv>
+        </div>
       </div>
-      <div className="is-overlay"></div>
     </div>
   );
 }
@@ -59,8 +73,8 @@ export default function RootLayout({ children }) {
                   <Image
                     src="/images/logo.jpg"
                     alt="Logo"
-                    width="250"
-                    height="150"
+                    width="150"
+                    height="50"
                   ></Image>
                 </a>
               </div>
