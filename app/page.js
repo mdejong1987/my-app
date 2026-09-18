@@ -38,6 +38,25 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="content-main content-main--cta">
+        <div className="content container">
+          <h2 className="is-size-2">Call To Action</h2>
+        </div>
+      </div>
+
+      <div className="content-main content-main--reviews">
+        <div className="content container">
+          <h2 className="is-size-2">Wat zeggen anderen?</h2>
+          <h3 className="is-size-3">Neem het net van ons aan maar wel van</h3>
+        </div>
+      </div>
+
+      <div className="content-main content-main--faq">
+        <div className="content container">
+          <h2 className="is-size-2">Meest gestelde vragen</h2>
+        </div>
+      </div>
+
       <div id="contact" className="content-main content-main--contact">
         <div className="content container">
           <h2 className="is-size-2">Contact</h2>
