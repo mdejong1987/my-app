@@ -3,10 +3,16 @@ import Image from "next/image";
 
 function Navigation() {
   return (
-    <nav className="navbar">
-      <div className="navbar-menu">
+    <nav
+      className="navbar is-fixed-top"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div className="container">
         <div className="navbar-brand">
-          <a href="/">[Logo]</a>
+          <a href="/" className="navbar-item">
+            [Logo]
+          </a>
           <a
             className="navbar-burger"
             role="button"
@@ -19,27 +25,29 @@ function Navigation() {
             <span aria-hidden="true"></span>
           </a>
         </div>
-        <div className="navbar-start">
-          <a className="navbar-item" href="/">
-            Home
-          </a>
-          <a className="navbar-item" href="#about">
-            About
-          </a>
-          <a className="navbar-item" href="#services">
-            Services
-          </a>
-          <a className="navbar-item" href="#contact">
-            Contact
-          </a>
-        </div>
-        <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="buttons">
-              <a className="button is-warning" href="tel:0768945325">
-                <strong>BEL ONS:</strong>
-                0768945325
-              </a>
+        <div className="navbar-menu">
+          <div className="navbar-start">
+            <a className="navbar-item" href="/">
+              Home
+            </a>
+            <a className="navbar-item" href="#about">
+              About
+            </a>
+            <a className="navbar-item" href="#services">
+              Services
+            </a>
+            <a className="navbar-item" href="#contact">
+              Contact
+            </a>
+          </div>
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="buttons">
+                <a className="button is-warning" href="tel:0768945325">
+                  <strong>BEL ONS:</strong>
+                  0768945325
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -82,12 +90,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="nl">
+    <html lang="nl" className="has-navbar-fixed-top">
       <body>
         <header>
-          <div className="container">
-            <Navigation />
-          </div>
+          <Navigation />
           <Hero />
         </header>
 
