@@ -3,54 +3,73 @@ import Image from "next/image";
 
 function Navigation() {
   return (
-    <div className="navbar-menu">
-      <div className="navbar-start">
-        <a className="navbar-item" href="/">
-          Home
-        </a>
-        <a className="navbar-item" href="#about">
-          About
-        </a>
-        <a className="navbar-item" href="#services">
-          Services
-        </a>
-        <a className="navbar-item" href="#contact">
-          Contact
-        </a>
-      </div>
-      <div className="navbar-end">
-        <div className="navbar-item">
-          <div className="buttons">
-            <a className="button is-warning" href="tel:0768945325">
-              <strong>BEL ONS:</strong>
-              0768945325
-            </a>
+    <nav className="navbar">
+      <div className="navbar-menu">
+        <div className="navbar-brand">
+          <a href="/">[Logo]</a>
+          <a
+            className="navbar-burger"
+            role="button"
+            aria-label="menu"
+            aria-expanded="false"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div className="navbar-start">
+          <a className="navbar-item" href="/">
+            Home
+          </a>
+          <a className="navbar-item" href="#about">
+            About
+          </a>
+          <a className="navbar-item" href="#services">
+            Services
+          </a>
+          <a className="navbar-item" href="#contact">
+            Contact
+          </a>
+        </div>
+        <div className="navbar-end">
+          <div className="navbar-item">
+            <div className="buttons">
+              <a className="button is-warning" href="tel:0768945325">
+                <strong>BEL ONS:</strong>
+                0768945325
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 
 function Hero() {
   return (
-    <div className="hero is-large">
+    <div className="hero is-large video-banner">
+      <video autoPlay muted loop playsInline>
+        <source src="/videos/video-banner.mp4" type="video/mp4" />
+      </video>
       <div className="hero-body">
         <div className="container">
-          <cdiv className="columns">
-            <div className="column"></div>
+          <div className="columns">
+            <div className="column is-hidden-touch"></div>
             <div className="column is-three-fifths">
-              <div className="title is-size-1 is-uppercase has-text-white">
+              <div className="title is-size-1 is-size-3-mobile is-uppercase has-text-white">
                 Hero Title
               </div>
-              <div className="subtitle is-size-2 has-text-white">
+              <div className="subtitle is-size-2 is-size-4-mobile has-text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </div>
-              <div className="button is-large is-primary has-text-white">
+              <div className="button is-large is-primary has-text-white is-hidden-touch">
                 Maak een afspraak
               </div>
             </div>
-          </cdiv>
+          </div>
         </div>
       </div>
     </div>
@@ -67,19 +86,7 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <div className="container">
-            <nav className="navbar">
-              <div className="navbar-brand">
-                <a href="/">
-                  <Image
-                    src="/images/logo.jpg"
-                    alt="Logo"
-                    width="150"
-                    height="50"
-                  ></Image>
-                </a>
-              </div>
-              <Navigation />
-            </nav>
+            <Navigation />
           </div>
           <Hero />
         </header>
