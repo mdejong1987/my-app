@@ -3,19 +3,66 @@ import GoogleReviews from "@/app/components/GoogleReviews";
 export default function Home() {
   return (
     <main>
-      <section id="about" className="section content-main content-main--about">
+      <section className="section content-main content-main--numbers">
         <div className="content container">
-          <h2 className="is-size-2 title">About</h2>
-          <p className="is-size-4 subtitle">
-            Sed in feugiat augue. Morbi pretium purus mi, ac vestibulum sapien
-            sodales sed. Maecenas ac efficitur odio. Quisque posuere nisi
-            volutpat massa ultricies, vel finibus sem congue. Aliquam vel ligula
-            non neque tincidunt tincidunt. Donec ullamcorper vestibulum tortor.
-            Nunc lacinia ipsum non ante tincidunt, ac imperdiet est placerat. In
-            id dui maximus, lobortis ipsum nec, porta justo. Cras venenatis
-            lacus justo, id faucibus neque maximus quis. Pellentesque non tempor
-            ipsum. Praesent est neque, mattis ac lorem quis, semper pharetra ex.
+          <nav className="level">
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Tweets</p>
+                <p className="title">3,456</p>
+              </div>
+            </div>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Following</p>
+                <p className="title">123</p>
+              </div>
+            </div>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Followers</p>
+                <p className="title">456K</p>
+              </div>
+            </div>
+            <div className="level-item has-text-centered">
+              <div>
+                <p className="heading">Likes</p>
+                <p className="title">789</p>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section id="about" className="section content-main content-main--about">
+        <div className="content container is-medium">
+          <h2>Over ons</h2>
+          <p>
+            Al sinds 1913 is Garagebedrijf Van Riel een vertrouwd gezicht.
+            Inmiddels staat de vierde generatie aan het roer, met nog steeds
+            dezelfde kernwaarden: eerlijke service, persoonlijk contact en een
+            klantvriendelijke aanpak. Als universeel autobedrijf onderhouden en
+            repareren wij alle merken auto’s.
           </p>
+          <h3>Waarom kiezen voor Van Riel?</h3>
+          <ul>
+            <li>
+              <strong>Familiebedrijf sinds 1913:</strong>Vier generaties aan
+              ervaring en passie voor het vak.
+            </li>
+            <li>
+              <strong>BOVAG-gecertificeerd:</strong> Sinds 1938 lid van BOVAG,
+              wat staat voor bewezen kwaliteit, garantie en betrouwbaarheid.
+            </li>
+            <li>
+              <strong>Universele service:</strong> Onderhoud en reparatie voor
+              elk automerk.
+            </li>
+            <li>
+              <strong>Snelle service zonder afspraak:</strong> Kom gerust langs
+              voor het vervangen van een lampje, bandenspanning of
+              vloeistofcontrole.
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -40,12 +87,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="content-main content-main--cta">
-        <div className="content container">
-          <h2 className="is-size-2">Call To Action</h2>
-        </div>
-      </div>
-
       <div className="content-main content-main--reviews">
         <div className="content container">
           <h2 className="is-size-2">Wat zeggen anderen?</h2>
@@ -53,6 +94,19 @@ export default function Home() {
           <GoogleReviews />
         </div>
       </div>
+
+      <section className="section content-main content-main--cta">
+        <div className="content container has-text-centered">
+          <h2 className="is-size-2">Maak vandaag nog een afspraak!</h2>
+          <p>
+            Wij staan altijd voor je klaar om samen te kijken naar de
+            mogelijkheden
+          </p>
+          <a href="" className="button is-warning">
+            Maak afspraak
+          </a>
+        </div>
+      </section>
 
       <div className="content-main content-main--faq">
         <div className="content container">

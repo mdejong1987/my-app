@@ -4,18 +4,18 @@ import Image from "next/image";
 function Navigation() {
   return (
     <nav
-      className="navbar is-fixed-top py-3"
+      className="navbar is-fixed-top py-3 has-shadow"
       role="navigation"
       aria-label="main navigation"
     >
       <div className="container">
         <div className="navbar-brand">
-          <a href="/" className="navbar-item">
+          <a href="/">
             <Image
               src="/images/gvr-logo.jpg"
               alt="Logo"
-              width="200"
-              height="91"
+              width="150"
+              height="68"
             ></Image>
           </a>
           <a
@@ -31,7 +31,7 @@ function Navigation() {
           </a>
         </div>
         <div className="navbar-menu">
-          <div className="navbar-start">
+          <div className="navbar-start is-justify-content-center is-flex-grow-1">
             <a className="navbar-item" href="/">
               Home
             </a>
