@@ -1,5 +1,7 @@
 import GoogleReviews from "@/app/components/GoogleReviews";
 import Services from "@/app/components/Services";
+import Faq from "@/app/components/Faq";
+import Contact from "@/app/components/Contact";
 
 export default function Home() {
   return (
@@ -69,13 +71,13 @@ export default function Home() {
 
       <Services />
 
-      <div className="content-main content-main--reviews">
+      <section className="section content-main content-main--reviews">
         <div className="content container">
           <h2 className="is-size-2">Wat zeggen anderen?</h2>
           <h3 className="is-size-3">Neem het net van ons aan maar wel van</h3>
           <GoogleReviews />
         </div>
-      </div>
+      </section>
 
       <section className="section content-main content-main--cta">
         <div className="content container has-text-centered">
@@ -90,17 +92,9 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="content-main content-main--faq">
-        <div className="content container">
-          <h2 className="is-size-2">Meest gestelde vragen</h2>
-        </div>
-      </div>
+      <Faq />
 
-      <div id="contact" className="content-main content-main--contact">
-        <div className="content container">
-          <h2 className="is-size-2">Contact</h2>
-        </div>
-      </div>
+      <Contact />
     </main>
   );
 }
