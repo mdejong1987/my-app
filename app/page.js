@@ -1,4 +1,5 @@
 import GoogleReviews from "@/app/components/GoogleReviews";
+import Services from "@/app/components/Services";
 
 export default function Home() {
   return (
@@ -66,26 +67,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="services"
-        className="section content-main content-main--services"
-      >
-        <div className="content container">
-          <h2 className="is-size-2 title">Services</h2>
-          <div className="columns is-3 is-mobile">
-            <div className="column">
-              <div className="card">
-                <div className="card-content">sdf</div>
-              </div>
-            </div>
-            <div className="column">
-              <div className="card">
-                <div className="card-content">sdf</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Services />
 
       <div className="content-main content-main--reviews">
         <div className="content container">
