@@ -1,4 +1,5 @@
 import GoogleReviews from "@/app/components/GoogleReviews";
+import CompanyStats from "@/app/components/CompanyStats";
 import Services from "@/app/components/Services";
 import Faq from "@/app/components/Faq";
 import Contact from "@/app/components/Contact";
@@ -6,36 +7,8 @@ import Contact from "@/app/components/Contact";
 export default function Home() {
   return (
     <main>
-      <section className="section content-main content-main--numbers">
-        <div className="content container">
-          <nav className="level">
-            <div className="level-item has-text-centered">
-              <div>
-                <p className="heading">Tweets</p>
-                <p className="title">3,456</p>
-              </div>
-            </div>
-            <div className="level-item has-text-centered">
-              <div>
-                <p className="heading">Following</p>
-                <p className="title">123</p>
-              </div>
-            </div>
-            <div className="level-item has-text-centered">
-              <div>
-                <p className="heading">Followers</p>
-                <p className="title">456K</p>
-              </div>
-            </div>
-            <div className="level-item has-text-centered">
-              <div>
-                <p className="heading">Likes</p>
-                <p className="title">789</p>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </section>
+      <CompanyStats />
+
       <section id="about" className="section content-main content-main--about">
         <div className="content container is-medium">
           <h2>Over ons</h2>
@@ -71,13 +44,7 @@ export default function Home() {
 
       <Services />
 
-      <section className="section content-main content-main--reviews">
-        <div className="content container">
-          <h2 className="is-size-2">Wat zeggen anderen?</h2>
-          <h3 className="is-size-3">Neem het net van ons aan maar wel van</h3>
-          <GoogleReviews />
-        </div>
-      </section>
+      <GoogleReviews />
 
       <section className="section content-main content-main--cta">
         <div className="content container has-text-centered">

@@ -18,15 +18,6 @@
   }
 }
 
-.video-banner {
-  position: relative;
-
-  .hero-body {
-    position: absolute;
-    top: 0;
-  }
-}
-
 /* Call Us Button */
 .call-button {
   display: inline-flex;

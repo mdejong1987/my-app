@@ -81,21 +81,16 @@ function Hero() {
       <video autoPlay muted loop playsInline>
         <source src="/videos/video-banner.mp4" type="video/mp4" />
       </video>
-      <div className="hero-body">
+      <div>
         <div className="container">
-          <div className="columns">
-            <div className="column is-hidden-touch"></div>
-            <div className="column is-three-fifths">
-              <div className="title is-size-1 is-size-3-mobile is-uppercase has-text-white">
-                Hero Title
-              </div>
-              <div className="subtitle is-size-2 is-size-4-mobile has-text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </div>
-              <div className="button is-large is-primary has-text-white is-hidden-touch">
-                Maak een afspraak
-              </div>
-            </div>
+          <div className="title is-size-1 is-size-3-mobile is-uppercase has-text-white">
+            Hero Title
+          </div>
+          <div className="subtitle is-size-2 is-size-4-mobile has-text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </div>
+          <div className="button is-large is-primary has-text-white is-hidden-touch">
+            Maak een afspraak
           </div>
         </div>
       </div>
