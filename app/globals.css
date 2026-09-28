@@ -1,5 +1,15 @@
 @import "../node_modules/bulma/css/bulma.min.css";
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+section[id],
+[id] {
+  scroll-margin-top: 90px;
+}
+
 .content-main--services,
 .content-main--numbers,
 .content-main--cta {
@@ -10,75 +20,35 @@
   padding: 60px 0;
 }
 
+.video-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: var(--bulma-navbar-height);
+  min-height: 80vh;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-banner--content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 2rem;
+    margin-top: 0;
+  }
+}
+
 .content-main--services {
   .card {
     box-shadow:
       0 8px 16px rgba(10, 10, 10, 0.1),
       0 0 0 1px rgba(10, 10, 10, 0.05);
-  }
-}
-
-/* Call Us Button */
-.call-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.4rem 1.25rem 0.4rem 0.4rem;
-  border-radius: 999px;
-  background: #ffe08a;
-  color: #1a1a1a;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(255, 196, 0, 0.35);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-.call-button:hover {
-  background: #ffd452;
-  color: #1a1a1a;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 196, 0, 0.45);
-}
-
-.call-button__icon {
-  display: grid;
-  place-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  background: #1a1a1a;
-  color: #ffe08a;
-  transition: transform 0.3s ease;
-}
-
-.call-button:hover .call-button__icon {
-  transform: rotate(-12deg) scale(1.08);
-}
-
-.call-button__text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.call-button__text small {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  opacity: 0.75;
-}
-
-.call-button__text strong {
-  font-size: 1rem;
-  letter-spacing: 0.02em;
-}
-
-/* Full width inside the opened mobile menu */
-@media (max-width: 1023px) {
-  .call-button {
-    width: 100%;
-    justify-content: center;
   }
 }
