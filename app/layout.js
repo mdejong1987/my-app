@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import BackToTopButton from "./components/BackToTopButton";
 
 function Hero() {
   return (
@@ -38,6 +39,8 @@ export default function RootLayout({ children }) {
         </header>
 
         {children}
+
+        <BackToTopButton />
 
         <footer className="footer">
           <div className="content has-text-centered">
