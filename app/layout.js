@@ -11,13 +11,13 @@ function Hero() {
       <div className="video-banner--content">
         <div className="container">
           <div className="title is-size-1 is-size-3-mobile is-uppercase has-text-white">
-            Hero Title
+            Echte dorpsgarage uit Terheijden
           </div>
           <div className="subtitle is-size-2 is-size-4-mobile has-text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            met een persoonlijke, eerlijke en transparante aanpak
           </div>
           <div className="button is-large is-primary has-text-white is-hidden-touch">
-            Maak een afspraak
+            <a href="#contact">Maak een afspraak</a>
           </div>
         </div>
       </div>

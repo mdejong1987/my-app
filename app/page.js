@@ -22,7 +22,7 @@ export default function Home() {
           <h3>Waarom kiezen voor Van Riel?</h3>
           <ul>
             <li>
-              <strong>Familiebedrijf sinds 1913:</strong>Vier generaties aan
+              <strong>Familiebedrijf sinds 1913:</strong> Vier generaties aan
               ervaring en passie voor het vak.
             </li>
             <li>
