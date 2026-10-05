@@ -20,6 +20,22 @@ section[id],
   padding: 60px 0;
 }
 
+.phone-cta-button {
+  max-width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: normal;
+}
+
+@media screen and (max-width: 480px) {
+  .phone-cta-button {
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+  }
+}
+
 .video-banner {
   position: relative;
   display: flex;

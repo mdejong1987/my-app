@@ -54,15 +54,7 @@ export default function Home() {
             gerust!
           </p>
           <div className="mb-6">
-            <a
-              href="tel:0765931215"
-              className="button px-6 py-5"
-              style={{
-                borderRadius: "50px",
-                fontSize: "1.5rem",
-                fontWeight: "bold",
-              }}
-            >
+            <a href="tel:0765931215" className="button phone-cta-button">
               <span className="icon mr-2">📞</span>
               <span>076 593 1215</span>
             </a>

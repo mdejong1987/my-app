@@ -32,7 +32,7 @@ export default function ContactSection() {
           <div className="column is-8-desktop is-10-tablet">
             <div
               ref={cardRef}
-              className="card p-5"
+              className="card"
               style={{
                 borderRadius: "16px",
                 boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
@@ -49,12 +49,7 @@ export default function ContactSection() {
                 <div className="mb-6">
                   <a
                     href="tel:0765931215"
-                    className="button is-dark is-large px-6 py-5"
-                    style={{
-                      borderRadius: "50px",
-                      fontSize: "1.5rem",
-                      fontWeight: "bold",
-                    }}
+                    className="button is-dark phone-cta-button"
                   >
                     <span className="icon mr-2">📞</span>
                     <span>076 593 1215</span>
