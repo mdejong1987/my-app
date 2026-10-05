@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
 
         <footer className="footer">
           <div className="content has-text-centered">
-            &copy; [ Bedrijfsnaam ] 2026
+            &copy; garagevanriel.nl 2026
           </div>
         </footer>
       </body>

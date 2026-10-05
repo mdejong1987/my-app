@@ -48,7 +48,7 @@ export default function ContactSection() {
                 {/* Grote Opvallende Bel-knop */}
                 <div className="mb-6">
                   <a
-                    href="tel:0761234567"
+                    href="tel:0765931215"
                     className="button is-dark is-large px-6 py-5"
                     style={{
                       borderRadius: "50px",
@@ -57,7 +57,7 @@ export default function ContactSection() {
                     }}
                   >
                     <span className="icon mr-2">📞</span>
-                    <span>076 - 123 45 67</span>
+                    <span>076 593 1215</span>
                   </a>
                   <p className="help is-size-6 mt-2 has-text-grey">
                     Direct een monteur aan de lijn
@@ -71,20 +71,20 @@ export default function ContactSection() {
                   <div className="column is-6 has-text-centered-mobile">
                     <h3 className="title is-4 mb-3">Locatie</h3>
                     <p className="has-text-weight-semibold mb-1">
-                      Autobedrijf Terheijden
+                      Garage van Riel
                     </p>
                     <p className="has-text-grey mb-3">
-                      Bredaseweg 12
+                      Hoofdstraat 72
                       <br />
-                      4841 AB Terheijden
+                      4844 CG Terheijden
                     </p>
                     <p className="is-size-7 has-text-grey">
                       E-mail:{" "}
                       <a
-                        href="mailto:info@autobedrijf.nl"
+                        href="mailto:info@garagevanriel.nl"
                         className="has-text-link"
                       >
-                        info@autobedrijf.nl
+                        info@garagevanriel.nl
                       </a>
                     </p>
                   </div>
@@ -96,19 +96,19 @@ export default function ContactSection() {
                       style={{ listStyle: "none", paddingLeft: 0 }}
                     >
                       <li className="is-flex is-justify-content-space-between mb-1">
-                        <span>Maandag - Vrijdag:</span>
+                        <span>Maandag t/m Vrijdag:</span>
                         <span className="has-text-weight-semibold">
-                          08:00 - 17:30
+                          08:00 - 18:00
                         </span>
                       </li>
                       <li className="is-flex is-justify-content-space-between mb-1">
-                        <span>Zaterdag:</span>
+                        <span>Pauze</span>
                         <span className="has-text-weight-semibold">
-                          09:00 - 13:00
+                          12:15 - 13:00
                         </span>
                       </li>
-                      <li className="is-flex is-justify-content-space-between">
-                        <span>Zondag:</span>
+                      <li className="is-flex is-justify-content-space-between mb-1">
+                        <span>Zaterdag & Zondag</span>
                         <span className="has-text-weight-semibold">
                           Gesloten
                         </span>

@@ -48,14 +48,25 @@ export default function Home() {
 
       <section className="section content-main content-main--cta">
         <div className="content container has-text-centered">
-          <h2 className="is-size-2">Maak vandaag nog een afspraak!</h2>
+          <h2 className="is-size-2">Neem Contact Op</h2>
           <p>
-            Wij staan altijd voor je klaar om samen te kijken naar de
-            mogelijkheden
+            Wilt u een afspraak maken of heeft u direct een vraag? Bel ons
+            gerust!
           </p>
-          <a href="" className="button is-warning">
-            Maak afspraak
-          </a>
+          <div className="mb-6">
+            <a
+              href="tel:0765931215"
+              className="button px-6 py-5"
+              style={{
+                borderRadius: "50px",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+              }}
+            >
+              <span className="icon mr-2">📞</span>
+              <span>076 593 1215</span>
+            </a>
+          </div>
         </div>
       </section>
 
