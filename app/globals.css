@@ -1,4 +1,5 @@
 @import "../node_modules/bulma/css/bulma.min.css";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 html {
   scroll-behavior: smooth;
@@ -14,6 +15,20 @@ section[id],
 .content-main--numbers,
 .content-main--cta {
   background-color: #f1f2f6;
+
+  h2 {
+    color: #0184c8;
+    text-transform: uppercase;
+  }
+}
+
+.content-main--about,
+.content-main--reviews,
+.content-main--faq {
+  h2 {
+    color: #0184c8;
+    text-transform: uppercase;
+  }
 }
 
 .content {

@@ -48,10 +48,10 @@ export default function Home() {
       <section className="section content-main content-main--cta">
         <div className="content container has-text-centered">
           <h2 className="is-size-2">Neem Contact Op</h2>
-          <p>
+          <h3>
             Wilt u een afspraak maken of heeft u direct een vraag? Bel ons
             gerust!
-          </p>
+          </h3>
           <div className="mb-6">
             <a href="tel:0765931215" className="button phone-cta-button">
               <span className="icon mr-2">📞</span>

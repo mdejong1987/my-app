@@ -139,7 +139,7 @@ export default function Navigation() {
             <div className="navbar-item">
               <a
                 className="call-button"
-                href="tel:+31768945325"
+                href="tel:+31765931215"
                 aria-label="Bel ons: 076 894 5325"
               >
                 <span className="call-button__icon" aria-hidden="true">
@@ -154,7 +154,7 @@ export default function Navigation() {
                 </span>
                 <span className="call-button__text">
                   <small>Bel ons direct</small>
-                  <strong>076 894 5325</strong>
+                  <strong>+31 (0)76 593 1215</strong>
                 </span>
               </a>
             </div>
