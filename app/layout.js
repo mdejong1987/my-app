@@ -26,7 +26,8 @@ function Hero() {
 }
 
 export const metadata = {
-  title: "Dit is een titel",
+  title:
+    "Garage van Riel - Echte dorpsgarage uit Terheijden met een persoonlijke, eerlijke en transparante aanpak",
 };
 
 export default function RootLayout({ children }) {
@@ -43,8 +44,12 @@ export default function RootLayout({ children }) {
         <BackToTopButton />
 
         <footer className="footer">
+          <div className="content columns">
+            <div className="column">Partners</div>
+            <div className="column">Socials</div>
+          </div>
           <div className="content has-text-centered">
-            &copy; garagevanriel.nl 2026
+            &copy; garagevanriel.nl {new Date().getFullYear()}
           </div>
         </footer>
       </body>
