@@ -2,7 +2,6 @@ import GoogleReviews from "@/app/components/GoogleReviews";
 import CompanyStats from "@/app/components/CompanyStats";
 import Services from "@/app/components/Services";
 import Faq from "@/app/components/Faq";
-import Contact from "@/app/components/Contact";
 
 export default function Home() {
   return (
@@ -63,8 +62,6 @@ export default function Home() {
       </section>
 
       <Faq />
-
-      <Contact />
     </main>
   );
 }

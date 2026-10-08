@@ -43,10 +43,49 @@ export default function RootLayout({ children }) {
 
         <BackToTopButton />
 
-        <footer className="footer">
+        <footer id="contact" className="footer">
           <div className="content columns">
-            <div className="column">Partners</div>
-            <div className="column">Socials</div>
+            <div className="column">
+              <ul>
+                <li>BOVAG</li>
+                <li>BOSCH</li>
+                <li>Merk 01</li>
+                <li>Merk 02</li>
+              </ul>
+            </div>
+            <div className="column">
+              <div>
+                <h3>Garage van Riel</h3>
+                <p>
+                  Garage van Riel - sinds 1913 uw vertrouwde universele
+                  autobedrijf. Eerlijke service, persoonlijk contact en een
+                  klantvriendelijke aanpak voor alle merken.
+                </p>
+                <ul>
+                  <li>
+                    <a href="">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="">Facebook</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3>Contact</h3>
+                <div>Hoofdstraat 72, 4844 CG Terheijden</div>
+                <div>
+                  <a href="">+31 (0)76 593 1215</a>
+                </div>
+                <div>
+                  <a href="mailto:info@garagevanriel.nl">
+                    info@garagevanriel.nl
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h3>Openingstijden</h3> Maandag - Vrijdag | 08:00 - 18:00
+              </div>
+            </div>
           </div>
           <div className="content has-text-centered">
             &copy; garagevanriel.nl {new Date().getFullYear()}
