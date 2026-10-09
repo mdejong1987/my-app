@@ -46,44 +46,85 @@ export default function RootLayout({ children }) {
 
         <footer id="contact" className="footer">
           <div className="content columns">
-            <div className="column">
-              <h2 className="is-uppercase">Partners</h2>
-              <ul>
-                <li>
+            <div className="column py-5">
+              <h2 className="is-uppercase">Wij werken samen met</h2>
+              <div className="grid">
+                <div className="cell">
                   <Image
                     src="/images/bovag-logo.webp"
                     alt="BOVAG Logo"
                     width="65"
                     height="103"
                   ></Image>
-                </li>
-                <li>BOSCH</li>
-                <li>Merk 01</li>
-                <li>Merk 02</li>
-              </ul>
+                </div>
+                <div className="cell">
+                  <Image
+                    src="/images/bovag-logo.webp"
+                    alt="BOVAG Logo"
+                    width="65"
+                    height="103"
+                  ></Image>
+                </div>
+                <div className="cell">
+                  <Image
+                    src="/images/bovag-logo.webp"
+                    alt="BOVAG Logo"
+                    width="65"
+                    height="103"
+                  ></Image>
+                </div>
+                <div className="cell">
+                  <Image
+                    src="/images/bovag-logo.webp"
+                    alt="BOVAG Logo"
+                    width="65"
+                    height="103"
+                  ></Image>
+                </div>
+                <div className="cell">
+                  <Image
+                    src="/images/bovag-logo.webp"
+                    alt="BOVAG Logo"
+                    width="65"
+                    height="103"
+                  ></Image>
+                </div>
+                <div className="cell">
+                  <Image
+                    src="/images/bovag-logo.webp"
+                    alt="BOVAG Logo"
+                    width="65"
+                    height="103"
+                  ></Image>
+                </div>
+              </div>
             </div>
             <div className="column">
-              <div>
+              <div className="py-5">
                 <h2 className="is-uppercase">Garage van Riel</h2>
                 <p className="is-size-4">
                   Sinds 1913 uw vertrouwde universele autobedrijf. Eerlijke
                   service, persoonlijk contact en een klantvriendelijke aanpak
                   voor alle merken.
                 </p>
-                <ul className="is-size-3">
-                  <li>
-                    <a href="">
-                      <i className="bi bi-instagram"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <i className="bi bi-facebook"></i>
-                    </a>
-                  </li>
-                </ul>
+                <div className="social-links">
+                  <a
+                    href="https://www.instagram.com/garage.van.riel.terheijden/"
+                    target="_blank"
+                    className="is-size-4 has-text-dark"
+                  >
+                    <i className="bi bi-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/garagevanriel/"
+                    target="_blank"
+                    className="is-size-4 has-text-dark"
+                  >
+                    <i className="bi bi-facebook"></i>
+                  </a>
+                </div>
               </div>
-              <div>
+              <div className="py-5">
                 <h2 className="is-uppercase">Contact</h2>
                 <div className="is-size-4 py-2">
                   <i className="bi bi-geo mr-2"></i>Hoofdstraat 72, 4844 CG
@@ -100,16 +141,45 @@ export default function RootLayout({ children }) {
                   </a>
                 </div>
               </div>
-              <div>
-                <h2 className="is-uppercase">Openingstijden</h2>{" "}
+              <div className="py-5">
+                <h2 className="is-uppercase">Openingstijden</h2>
                 <div className="is-size-4">
-                  Maandag - Vrijdag | 08:00 - 18:00
+                  <div className="opening-hours">
+                    <div>Maandag - Vrijdag | 08:00 - 18:00</div>
+                    <div className="opening-hours-break">
+                      Gesloten tijdens lunchpauze:
+                      <strong> 12:15 - 13:00</strong>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="content has-text-centered">
             &copy; garagevanriel.nl {new Date().getFullYear()}
+            <nav className="legal-links" aria-label="Juridische informatie">
+              <a
+                href="/privacyverklaring.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacyverklaring
+              </a>
+              <a
+                href="/wettelijke-garantie.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Wettelijke garantie
+              </a>
+              <a
+                href="/algemene-voorwaarden.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Algemene voorwaarden
+              </a>
+            </nav>
           </div>
         </footer>
       </body>

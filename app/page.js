@@ -18,7 +18,7 @@ export default function Home() {
             klantvriendelijke aanpak. Als universeel autobedrijf onderhouden en
             repareren wij alle merken auto’s.
           </p>
-          <h3>Waarom kiezen voor Van Riel?</h3>
+          <h4>Waarom kiezen voor Van Riel?</h4>
           <ul>
             <li>
               <strong>Familiebedrijf sinds 1913:</strong> Vier generaties aan
