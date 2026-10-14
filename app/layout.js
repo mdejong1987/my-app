@@ -17,8 +17,19 @@ function Hero() {
           <div className="subtitle is-size-2 is-size-4-mobile has-text-white">
             met een persoonlijke, eerlijke en transparante aanpak
           </div>
-          <div className="button is-large is-primary has-text-white is-hidden-touch">
-            <a href="#contact">Maak een afspraak</a>
+          <div className="video-banner__actions">
+            <a
+              className="button is-large video-banner__button"
+              href="#contact"
+            >
+              Maak een afspraak
+            </a>
+            <a
+              className="button is-large video-banner__button"
+              href="tel:+31765931215"
+            >
+              Bel ons direct
+            </a>
           </div>
         </div>
       </div>

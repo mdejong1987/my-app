@@ -135,30 +135,6 @@ export default function Navigation() {
               Contact
             </a>
           </div>
-          <div className="navbar-end">
-            <div className="navbar-item">
-              <a
-                className="call-button"
-                href="tel:+31765931215"
-                aria-label="Bel ons: 076 894 5325"
-              >
-                <span className="call-button__icon" aria-hidden="true">
-                  <svg
-                    viewBox="0 0 24 24"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                  >
-                    <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z" />
-                  </svg>
-                </span>
-                <span className="call-button__text">
-                  <small>Bel ons direct</small>
-                  <strong>+31 (0)76 593 1215</strong>
-                </span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </nav>
