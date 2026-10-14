@@ -117,7 +117,7 @@ export default function Navigation() {
           ref={menuRef}
           className={`navbar-menu ${isMenuOpen ? "is-active" : ""}`}
         >
-          <div className="navbar-start is-justify-content-center is-flex-grow-1">
+          <div className="navbar-start is-justify-content-flex-end is-flex-grow-1">
             <a className="navbar-item" href="/" onClick={handleNavClick}>
               Home
             </a>
