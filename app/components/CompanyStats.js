@@ -69,9 +69,8 @@ export default function CompanyStats() {
           {statistics.map(({ label, value, decimals, suffix }) => (
             <div key={label} className="level-item has-text-centered">
               <div>
-                <p className="heading">{label}</p>
                 <p
-                  className="title"
+                  className="title is-size-1"
                   data-count={value}
                   data-decimals={decimals}
                   data-suffix={suffix}
@@ -82,6 +81,7 @@ export default function CompanyStats() {
                   }).format(value)}
                   {suffix}
                 </p>
+                <p className="heading is-size-5">{label}</p>
               </div>
             </div>
           ))}
