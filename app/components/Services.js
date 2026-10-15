@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -52,19 +52,32 @@ const baseServices = [
   },
 ];
 
-const pageSize = 6;
-const pageCount = Math.ceil(baseServices.length / pageSize);
-
 export default function ServicesSection() {
   const containerRef = useRef(null);
   const pageRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const [pageSize, setPageSize] = useState(6);
+  const pageCount = Math.ceil(baseServices.length / pageSize);
 
   const goToPage = (direction) => {
-    setCurrentPage(
-      (page) => (page + direction + pageCount) % pageCount,
-    );
+    setCurrentPage((page) => (page + direction + pageCount) % pageCount);
   };
+
+  useEffect(() => {
+    const updatePageSize = () => {
+      const nextPageSize = window.innerWidth <= 768 ? 2 : 6;
+
+      if (nextPageSize !== pageSize) {
+        setCurrentPage(0);
+        setPageSize(nextPageSize);
+      }
+    };
+
+    updatePageSize();
+    window.addEventListener("resize", updatePageSize);
+
+    return () => window.removeEventListener("resize", updatePageSize);
+  }, [pageSize]);
 
   useGSAP(
     () => {
@@ -74,7 +87,7 @@ export default function ServicesSection() {
         { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" },
       );
     },
-    { scope: containerRef, dependencies: [currentPage] },
+    { scope: containerRef, dependencies: [currentPage, pageSize] },
   );
 
   return (
