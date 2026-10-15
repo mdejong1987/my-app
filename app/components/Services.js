@@ -177,6 +177,13 @@ export default function ServicesSection() {
                 }}
               >
                 <div className="card-content">
+                  <div className="has-text-centered mb-4">
+                    <i
+                      className="bi bi-car-front"
+                      style={{ fontSize: "4rem" }}
+                      aria-hidden="true"
+                    ></i>
+                  </div>
                   <h2 className="title is-4">{service.title}</h2>
                   <p>{service.description}</p>
                 </div>
