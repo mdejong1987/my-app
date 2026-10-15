@@ -52,68 +52,29 @@ const baseServices = [
   },
 ];
 
-const services = [...baseServices, ...baseServices];
+const pageSize = 6;
+const pageCount = Math.ceil(baseServices.length / pageSize);
 
 export default function ServicesSection() {
   const containerRef = useRef(null);
-  const trackRef = useRef(null);
-  const cardsRef = useRef([]);
+  const pageRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(0);
 
-  const activeIndexRef = useRef(0);
-  const [, setDisplayIndex] = useState(0);
-
-  const cardWidth = 320;
-  const gap = 24;
-  const step = cardWidth + gap;
-
-  const goToIndex = (targetIndex, animate = true) => {
-    const total = services.length;
-
-    // Wrap target index safely
-    let wrappedIndex = ((targetIndex % total) + total) % total;
-    activeIndexRef.current = wrappedIndex;
-    setDisplayIndex(wrappedIndex);
-
-    // Calculate dynamic center offset based on container width
-    const containerWidth = containerRef.current
-      ? containerRef.current.offsetWidth
-      : 0;
-    const centerOffset = (containerWidth - cardWidth) / 2;
-    const targetX = -wrappedIndex * step + centerOffset;
-
-    // Animate track translation
-    gsap.to(trackRef.current, {
-      x: targetX,
-      duration: animate ? 0.6 : 0,
-      ease: "power2.out",
-    });
-
-    // Animate scale & opacity focus effect
-    cardsRef.current.forEach((card, i) => {
-      if (!card) return;
-      const isCenter = i === wrappedIndex;
-
-      gsap.to(card, {
-        scale: isCenter ? 1.08 : 0.88,
-        opacity: isCenter ? 1 : 0.5,
-        duration: animate ? 0.5 : 0,
-        ease: "power2.out",
-      });
-    });
+  const goToPage = (direction) => {
+    setCurrentPage(
+      (page) => (page + direction + pageCount) % pageCount,
+    );
   };
 
   useGSAP(
     () => {
-      // Initialize layout centered on load
-      goToIndex(0, false);
-
-      // Recalculate center alignment on window resize
-      const handleResize = () => goToIndex(activeIndexRef.current, false);
-      window.addEventListener("resize", handleResize);
-
-      return () => window.removeEventListener("resize", handleResize);
+      gsap.fromTo(
+        pageRef.current,
+        { opacity: 0, x: 16 },
+        { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" },
+      );
     },
-    { scope: containerRef },
+    { scope: containerRef, dependencies: [currentPage] },
   );
 
   return (
@@ -126,70 +87,56 @@ export default function ServicesSection() {
       <div className="content container is-flex is-justify-content-space-between is-align-items-center mb-5">
         <h2 className="is-size-2 title mb-0">Services</h2>
 
-        {/* Controls */}
         <div className="buttons">
           <button
             className="button is-outlined is-dark"
-            onClick={() => goToIndex(activeIndexRef.current - 1)}
-            aria-label="Previous service"
+            onClick={() => goToPage(-1)}
+            aria-label="Vorige pagina met services"
           >
             ←
           </button>
           <button
             className="button is-outlined is-dark"
-            onClick={() => goToIndex(activeIndexRef.current + 1)}
-            aria-label="Next service"
+            onClick={() => goToPage(1)}
+            aria-label="Volgende pagina met services"
           >
             →
           </button>
         </div>
       </div>
 
-      {/* Slider Viewport */}
-      <div className="is-flex" style={{ width: "100%", overflow: "hidden" }}>
-        <div
-          ref={trackRef}
-          className="columns is-mobile my-0"
-          style={{
-            display: "flex",
-            flexWrap: "nowrap",
-            gap: `${gap}px`,
-            willChange: "transform",
-          }}
-        >
-          {services.map((service, index) => (
-            <div
-              key={index}
-              ref={(el) => (cardsRef.current[index] = el)}
-              className="column"
-              style={{
-                width: `${cardWidth}px`,
-                flex: "0 0 auto",
-                transformOrigin: "center center",
-              }}
-            >
+      <div className="container">
+        <div ref={pageRef} className="columns is-multiline">
+          {baseServices
+            .slice(currentPage * pageSize, (currentPage + 1) * pageSize)
+            .map((service) => (
               <div
-                className="card"
-                style={{
-                  height: "100%",
-                  borderRadius: "12px",
-                  boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
-                }}
+                key={service.title}
+                className="column is-half-tablet is-one-third-desktop"
+                style={{ display: "flex" }}
               >
-                <div className="card-content">
-                  <div className="has-text-centered mb-4">
-                    <i
-                      className="bi bi-car-front"
-                      style={{ fontSize: "4rem" }}
-                      aria-hidden="true"
-                    ></i>
+                <div
+                  className="card"
+                  style={{
+                    width: "100%",
+                    borderRadius: "12px",
+                    boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
+                  }}
+                >
+                  <div className="card-content">
+                    <div className="has-text-centered mb-4">
+                      <i
+                        className="bi bi-car-front"
+                        style={{ fontSize: "4rem" }}
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <h2 className="title is-4">{service.title}</h2>
+                    <p>{service.description}</p>
                   </div>
-                  <h2 className="title is-4">{service.title}</h2>
-                  <p>{service.description}</p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>
